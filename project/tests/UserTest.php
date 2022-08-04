@@ -53,4 +53,16 @@ class UserTest extends TestCase
         $this->assertContains($target[0],  $exceptedCards);
         $this->assertContains($target[1],  $exceptedCards);
     }
+
+     /**
+     * @depends testUserHandNumber
+     */
+    public function testCalculatePoint()
+    {
+        $game = new Game();
+
+        $target = $game->getDealer()->calculatePoint($game);
+
+        //$this->assertIsNumeric($target); //
+    }
 }

@@ -14,7 +14,6 @@ class DeckTest extends TestCase
         $target = $deckObj->getDeck();
 
       $this->assertCount(52, $target);
-      $this->assertContains("A_coeur",  $target);
     }
 
     /**
