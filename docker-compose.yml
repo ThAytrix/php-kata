@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  
+  www:
+    build: php # On ne précise pas d'image mais on lui de build Php (nom du repertoire Dockerfile)
+    container_name: www_docker_kata
+    ports:
+      - "8741:80"
+    volumes:
+      - ./php/vhosts:/etc/apache2/sites-enabled # Permet de passer la configuration des vhosts dans le container
+      - ./:/var/www
+    restart: always
+    networks:
+      - dev
+
+networks:
+  dev:
+
+volumes:
+  db-data:
