@@ -2,7 +2,6 @@
 
 namespace Tests;
 
-use App\Controller\User;
 use App\Controller\Game;
 use PHPUnit\Framework\TestCase;
 
@@ -62,7 +61,5 @@ class UserTest extends TestCase
         $game = new Game();
 
         $target = $game->getDealer()->calculatePoint($game);
-
-        //$this->assertIsNumeric($target); //
     }
 }

@@ -3,7 +3,6 @@
 namespace Tests;
 
 use App\Controller\Game;
-use App\Controller\User;
 
 use PHPUnit\Framework\TestCase;
 
@@ -11,7 +10,6 @@ class GameTest extends TestCase
 {
     public function testSplitCardFace()
     {
-        // arrange
         $gameObj = new Game();
         
         $excepted = "2";
