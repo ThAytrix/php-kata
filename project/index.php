@@ -8,6 +8,6 @@ use App\Controller\Game;
 
 $game = new Game();
 
-echo($test->say());
+
 
 ?>
